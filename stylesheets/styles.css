@@ -253,3 +253,11 @@ footer {
     color:#444;
   }
 }
+
+.social {
+}
+
+.social > iframe,
+.social > div {
+	padding-bottom: 18px;
+}	
