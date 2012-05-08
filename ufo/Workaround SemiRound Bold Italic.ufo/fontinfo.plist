@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ascender</key>
+	<integer>1000</integer>
+	<key>capHeight</key>
+	<integer>1000</integer>
+	<key>descender</key>
+	<integer>-100</integer>
+	<key>familyName</key>
+	<string>Workaround</string>
+	<key>macintoshFONDName</key>
+	<string>Workaround</string>
+	<key>openTypeNameCompatibleFullName</key>
+	<string>Workaround-SemiRound Bold Italic</string>
+	<key>openTypeNameDesigner</key>
+	<string>Charles Matthew Chen</string>
+	<key>openTypeNameManufacturer</key>
+	<string>Charles Matthew Chen</string>
+	<key>openTypeNamePreferredSubfamilyName</key>
+	<string>Workaround-SemiRound Bold Italic</string>
+	<key>postscriptFontName</key>
+	<string>Workaround-SemiRoundBoldItalic</string>
+	<key>postscriptFullName</key>
+	<string>Workaround-SemiRound Bold Italic</string>
+	<key>styleMapFamilyName</key>
+	<string>Workaround-SemiRound Bold Italic</string>
+	<key>styleName</key>
+	<string>SemiRound Bold Italic</string>
+	<key>unitsPerEm</key>
+	<integer>1600</integer>
+	<key>versionMajor</key>
+	<integer>0</integer>
+	<key>versionMinor</key>
+	<integer>1</integer>
+	<key>xHeight</key>
+	<integer>750</integer>
+	<key>year</key>
+	<integer>2012</integer>
+</dict>
+</plist>
