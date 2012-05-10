@@ -4,6 +4,26 @@
 <dict>
 	<key>!</key>
 	<string>!.glif</string>
+	<key>0</key>
+	<string>0.glif</string>
+	<key>1</key>
+	<string>1.glif</string>
+	<key>2</key>
+	<string>2.glif</string>
+	<key>3</key>
+	<string>3.glif</string>
+	<key>4</key>
+	<string>4.glif</string>
+	<key>5</key>
+	<string>5.glif</string>
+	<key>6</key>
+	<string>6.glif</string>
+	<key>7</key>
+	<string>7.glif</string>
+	<key>8</key>
+	<string>8.glif</string>
+	<key>9</key>
+	<string>9.glif</string>
 	<key>A</key>
 	<string>A_.glif</string>
 	<key>B</key>

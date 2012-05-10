@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="E" format="1">
-  <advance width="898"/>
+  <advance width="892"/>
   <unicode hex="0045"/>
   <outline>
     <contour>
-      <point x="550" y="7" type="line" smooth="yes"/>
-      <point x="603" y="7"/>
-      <point x="651" y="46"/>
-      <point x="657" y="95" type="curve"/>
-      <point x="657" y="95" type="line"/>
-      <point x="663" y="144"/>
-      <point x="626" y="183"/>
-      <point x="573" y="183" type="curve" smooth="yes"/>
-      <point x="201" y="183" type="line"/>
+      <point x="542" y="0" type="line" smooth="yes"/>
+      <point x="595" y="0"/>
+      <point x="643" y="39"/>
+      <point x="649" y="88" type="curve"/>
+      <point x="649" y="88" type="line"/>
+      <point x="655" y="136"/>
+      <point x="618" y="176"/>
+      <point x="565" y="176" type="curve" smooth="yes"/>
+      <point x="200" y="176" type="line"/>
       <point x="233" y="422" type="line"/>
       <point x="465" y="422" type="line" smooth="yes"/>
       <point x="517" y="422"/>
@@ -23,15 +23,15 @@
       <point x="540" y="598"/>
       <point x="488" y="598" type="curve" smooth="yes"/>
       <point x="255" y="598" type="line"/>
-      <point x="284" y="817" type="line"/>
-      <point x="656" y="817" type="line" smooth="yes"/>
-      <point x="708" y="817"/>
-      <point x="756" y="856"/>
-      <point x="762" y="905" type="curve"/>
-      <point x="762" y="905" type="line"/>
-      <point x="769" y="954"/>
-      <point x="731" y="993"/>
-      <point x="679" y="993" type="curve" smooth="yes"/>
+      <point x="285" y="824" type="line"/>
+      <point x="650" y="824" type="line" smooth="yes"/>
+      <point x="702" y="824"/>
+      <point x="750" y="864"/>
+      <point x="756" y="912" type="curve"/>
+      <point x="756" y="912" type="line"/>
+      <point x="762" y="961"/>
+      <point x="725" y="1000"/>
+      <point x="672" y="1000" type="curve" smooth="yes"/>
       <point x="227" y="1000" type="line" smooth="yes"/>
       <point x="167" y="1000"/>
       <point x="112" y="955"/>

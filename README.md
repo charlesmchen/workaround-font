@@ -1,7 +1,7 @@
 Workaround
 ===============
 
-A free &amp; open-source rounded sans typeface
+A free &amp; open-source rounded sans typeface.
 
 Released under the [SIL Open Font License](WeViews/blob/master/OFL.txt) (OFL).
 
