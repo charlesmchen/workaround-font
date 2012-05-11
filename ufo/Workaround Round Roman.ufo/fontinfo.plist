@@ -3,23 +3,37 @@
 <plist version="1.0">
 <dict>
 	<key>ascender</key>
-	<integer>1000</integer>
+	<integer>1100</integer>
 	<key>capHeight</key>
 	<integer>1000</integer>
 	<key>descender</key>
 	<integer>-300</integer>
 	<key>familyName</key>
 	<string>Workaround</string>
+	<key>italicAngle</key>
+	<integer>0</integer>
 	<key>macintoshFONDName</key>
 	<string>Workaround</string>
+	<key>openTypeHheaAscender</key>
+	<integer>1100</integer>
+	<key>openTypeHheaCaretOffset</key>
+	<integer>0</integer>
+	<key>openTypeHheaCaretSlopeRise</key>
+	<integer>1000</integer>
+	<key>openTypeHheaCaretSlopeRun</key>
+	<integer>0</integer>
+	<key>openTypeHheaDescender</key>
+	<integer>-300</integer>
 	<key>openTypeNameCompatibleFullName</key>
 	<string>Workaround-Round Roman</string>
 	<key>openTypeNameDesigner</key>
 	<string>Charles Matthew Chen</string>
 	<key>openTypeNameManufacturer</key>
 	<string>Charles Matthew Chen</string>
+	<key>openTypeNamePreferredFamilyName</key>
+	<string>Workaround</string>
 	<key>openTypeNamePreferredSubfamilyName</key>
-	<string>Workaround-Round Roman</string>
+	<string>Round Roman</string>
 	<key>postscriptFontName</key>
 	<string>Workaround-RoundRoman</string>
 	<key>postscriptFullName</key>
@@ -31,9 +45,9 @@
 	<key>unitsPerEm</key>
 	<integer>1600</integer>
 	<key>versionMajor</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>versionMinor</key>
-	<integer>10</integer>
+	<integer>0</integer>
 	<key>xHeight</key>
 	<integer>750</integer>
 	<key>year</key>

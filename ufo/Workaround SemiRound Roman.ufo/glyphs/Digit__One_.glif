@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Digit_One" format="1">
+  <advance width="495"/>
+  <unicode hex="0031"/>
+  <outline>
+    <contour>
+      <point x="360" y="946" type="line" smooth="yes"/>
+      <point x="360" y="971"/>
+      <point x="337" y="992"/>
+      <point x="300" y="1001" type="curve" smooth="yes"/>
+      <point x="264" y="1010"/>
+      <point x="224" y="1004"/>
+      <point x="198" y="986" type="curve"/>
+      <point x="11" y="785" type="line" smooth="yes"/>
+      <point x="-10" y="763"/>
+      <point x="0" y="720"/>
+      <point x="33" y="690" type="curve"/>
+      <point x="33" y="690" type="line"/>
+      <point x="66" y="660"/>
+      <point x="109" y="654"/>
+      <point x="129" y="675" type="curve" smooth="yes"/>
+      <point x="190" y="741" type="line"/>
+      <point x="190" y="48" type="line" smooth="yes"/>
+      <point x="190" y="19"/>
+      <point x="228" y="-5"/>
+      <point x="275" y="-5" type="curve" smooth="yes"/>
+      <point x="322" y="-5"/>
+      <point x="360" y="19"/>
+      <point x="360" y="48" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>
