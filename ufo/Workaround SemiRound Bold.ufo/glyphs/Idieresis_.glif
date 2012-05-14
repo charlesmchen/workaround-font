@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Idieresis" format="1">
+  <advance width="345"/>
+  <unicode hex="00CF"/>
+  <outline>
+    <contour>
+      <point x="210" y="945" type="line" smooth="yes"/>
+      <point x="210" y="979"/>
+      <point x="163" y="1006"/>
+      <point x="105" y="1006" type="curve" smooth="yes"/>
+      <point x="47" y="1006"/>
+      <point x="0" y="979"/>
+      <point x="0" y="945" type="curve" smooth="yes"/>
+      <point x="0" y="55" type="line" smooth="yes"/>
+      <point x="0" y="21"/>
+      <point x="47" y="-6"/>
+      <point x="105" y="-6" type="curve" smooth="yes"/>
+      <point x="163" y="-6"/>
+      <point x="210" y="21"/>
+      <point x="210" y="55" type="curve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="18" y="1208" type="line" smooth="yes"/>
+      <point x="18" y="1242"/>
+      <point x="-29" y="1269"/>
+      <point x="-87" y="1269" type="curve" smooth="yes"/>
+      <point x="-145" y="1269"/>
+      <point x="-192" y="1242"/>
+      <point x="-192" y="1208" type="curve" smooth="yes"/>
+      <point x="-192" y="1136" type="line" smooth="yes"/>
+      <point x="-192" y="1102"/>
+      <point x="-145" y="1075"/>
+      <point x="-87" y="1075" type="curve" smooth="yes"/>
+      <point x="-29" y="1075"/>
+      <point x="18" y="1102"/>
+      <point x="18" y="1136" type="curve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="402" y="1208" type="line" smooth="yes"/>
+      <point x="402" y="1242"/>
+      <point x="355" y="1269"/>
+      <point x="297" y="1269" type="curve" smooth="yes"/>
+      <point x="239" y="1269"/>
+      <point x="192" y="1242"/>
+      <point x="192" y="1208" type="curve" smooth="yes"/>
+      <point x="192" y="1136" type="line" smooth="yes"/>
+      <point x="192" y="1102"/>
+      <point x="239" y="1075"/>
+      <point x="297" y="1075" type="curve" smooth="yes"/>
+      <point x="355" y="1075"/>
+      <point x="402" y="1102"/>
+      <point x="402" y="1136" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>

@@ -20,15 +20,18 @@ TODOs:
 * When we use connectPathSegments to finalize complicated paths, do we end up with irrational
    segments?  Should we modify connectPathSegments() to modify in-place adjoining segments with 
    close (re: a specific tolerance) endpoints?
+* The Cap-A is bad.
+* The Cap-A is tricky.
+* The Cap-B is tricky.
 * The Cap-G is very tricky.
 * The Cap-J is tricky.
-* The Cap-R is tricky.
-* The Cap-A is tricky.
-* The Cap-A is outright bad.
-* The Cap-B is tricky.
 * The Cap-K is tricky.
 * The Cap-M is outright bad.  inverting the w isn't good enough.
+* The Cap-R is tricky.
 * Should the foot of the Cap-R leg flush to the baseline or rotated square to the leg?
+* The 2 is tricky.
+* The 7 is outright bad. 
+* The 8 is tricky. 
 
 * We need to compare various cross-bars and make sure they align.
   * A, S, F, G, H, K, E, R, Y, P, B, X, 
@@ -39,6 +42,7 @@ http://www.myfonts.com/fonts/bomparte/glow-gothic/overlay/glyphs.html
 http://www.myfonts.com/fonts/g-type/chevin-pro/bold/glyphs.html
 http://www.myfonts.com/fonts/typodermic/scheme/regular/glyphs.html
 http://www.myfonts.com/fonts/typodermic/report/semibold/glyphs.html
+http://www.myfonts.com/fonts/exljbris/museo-sans-rounded/
 
 http://www.fontshop.com/fonts/downloads/fontfont/ff_speak_web/
 http://www.fontshop.com/fonts/downloads/fontfont/ff_din_round_web/
