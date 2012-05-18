@@ -1,11 +1,59 @@
 <html>
 <head>
 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+goToUrl = function (option){
+//	alert('goToUrl: ' + option);
+	var val = $(option).val();
+	if (val != null && val != '') {
+//		alert('goToUrl!: ' + option);
+		window.top.location.href = val;
+//		window.top.location.replace(val);
+	}
+}
+
+enableKeyboardNavigation = function() {	
+
+	var previousLink = "page_Workaround-SemiRoundItalic.html";
+
+	var nextLink = "page_Workaround-SemiRoundSemiBold.html";
+
+//	alert('hi');
+
+	$(document).keydown(function(event) {
+//		alert('ho');
+		if ($('input:focus').length === 0) { // Don't scroll page if they are typing into an input field
+//			alert('ho: ' + event.which);
+			switch(event.which) {
+				case 74: // j
+				case 39: // --> (right arrow key)
+				goToUrl(nextLink);
+				break;
+
+				case 75: // k
+				case 37: // <-- (left arrow key)
+				goToUrl(previousLink);
+				break;
+			}
+		}
+	});
+}
+
+enableKeyboardNavigation();
+
+</script>
+
 <style type="text/css">
 <!--
 
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+  
 body {
 	color: #000; 
+	font:18px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background-color: #FFFFFF; 
 	text-align: left; 
 	margin: 5px; 
@@ -16,9 +64,18 @@ table {
 }
 
 a, blockquote, body, div, html, input, li, p, pre, span, table, td, textarea, th, tr, h1, h2, h3, img  { 
+/*
 	font-size: 11pt; 
 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', Arial, Helvetica, sans-serif;
+*/
 } 
+
+a {
+  color:#39c;
+  font-weight:400;
+  text-decoration:none;
+}
+
 	
 form { 
 	display: inline; 
@@ -74,7 +131,10 @@ font-size: 2.0em;
 	display: inline;
 }
 
-.glyph_page_links,
+.glyph_page_links {
+	padding-top: 5px;
+}
+
 .glyph_images {
 	padding-top: 25px;
 }
@@ -101,14 +161,14 @@ font-size: 2.0em;
 	Workaround Font Comparison
 </div>
 
-<div class="topsection">
-	<a href="http://charlesmchen.github.com/workaround-font/">Back to Project Pages</a>
-</div>
-
 <div class="topsection, emphasize">
-	<div style="font-size: 1.2em; ">
+	<div>
 	Font: SemiRound Roman
 	</div>
+</div>
+
+<div class="topsection">
+	<a href="http://charlesmchen.github.com/workaround-font/">Back to Project Pages</a>
 </div>
 
 <div class="glyph_page_links">
@@ -164,115 +224,769 @@ font-size: 2.0em;
 
 <div class="glyph_images">
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_33_small.png" /></a>
+  <a href=" - exclam" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_33_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_48_small.png" /></a>
+  <a href=" - quotedbl" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_34_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_49_small.png" /></a>
+  <a href=" - numbersign" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_50_small.png" /></a>
+  <a href=" - dollar" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_36_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_51_small.png" /></a>
+  <a href=" - percent" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_37_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_52_small.png" /></a>
+  <a href=" - ampersand" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_38_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_53_small.png" /></a>
+  <a href=" - quotesingle" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_39_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_54_small.png" /></a>
+  <a href=" - parenleft" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_40_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_55_small.png" /></a>
+  <a href=" - parenright" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_41_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_56_small.png" /></a>
+  <a href=" - asterisk" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_42_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_57_small.png" /></a>
+  <a href=" - plus" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_43_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_65_small.png" /></a>
+  <a href=" - comma" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_66_small.png" /></a>
+  <a href=" - hyphen" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_45_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_67_small.png" /></a>
+  <a href=" - period" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_46_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_68_small.png" /></a>
+  <a href=" - slash" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_47_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_69_small.png" /></a>
+  <a href=" - zero" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_48_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_70_small.png" /></a>
+  <a href=" - one" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_49_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_71_small.png" /></a>
+  <a href=" - two" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_50_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_72_small.png" /></a>
+  <a href=" - three" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_51_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_73_small.png" /></a>
+  <a href=" - four" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_52_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_74_small.png" /></a>
+  <a href=" - five" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_53_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_75_small.png" /></a>
+  <a href=" - six" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_54_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_76_small.png" /></a>
+  <a href=" - seven" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_55_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_77_small.png" /></a>
+  <a href=" - eight" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_56_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_78_small.png" /></a>
+  <a href=" - nine" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_57_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_79_small.png" /></a>
+  <a href=" - colon" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_58_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_80_small.png" /></a>
+  <a href=" - semicolon" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_59_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_81_small.png" /></a>
+  <a href=" - less" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_60_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_82_small.png" /></a>
+  <a href=" - equal" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_61_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_83_small.png" /></a>
+  <a href=" - greater" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_62_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_84_small.png" /></a>
+  <a href=" - question" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_63_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_85_small.png" /></a>
+  <a href=" - A" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_65_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_86_small.png" /></a>
+  <a href=" - B" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_66_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_87_small.png" /></a>
+  <a href=" - C" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_67_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_88_small.png" /></a>
+  <a href=" - D" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_68_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_89_small.png" /></a>
+  <a href=" - E" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_69_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_90_small.png" /></a>
+  <a href=" - F" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_70_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - G" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_71_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - H" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_72_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - I" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_73_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - J" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_74_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - K" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_75_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - L" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_76_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - M" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_77_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - N" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_78_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - O" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_79_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - P" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_80_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Q" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_81_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - R" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_82_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - S" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_83_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - T" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_84_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - U" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_85_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - V" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_86_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - W" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_87_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - X" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_88_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Y" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_89_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Z" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_90_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - bracketleft" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_91_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - backslash" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_92_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - bracketright" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_93_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - asciicircum" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_94_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - underscore" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_95_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - grave" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_96_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - a" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_97_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - b" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_98_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - c" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_99_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - d" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_100_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - e" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_101_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - f" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_102_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - g" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_103_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - h" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_104_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - i" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_105_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - j" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_106_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - k" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - l" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_108_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - m" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_109_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - n" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_110_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - o" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_111_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - p" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_112_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - q" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_113_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - r" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_114_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - s" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_115_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - t" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_116_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - u" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_117_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - v" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_118_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - w" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_119_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - x" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_120_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - y" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_121_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - z" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_122_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - braceleft" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_123_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - bar" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_124_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - braceright" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_125_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - asciitilde" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_126_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - exclamdown" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_161_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - dieresis" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_168_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - macron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_175_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - acute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_180_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - periodcentered" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_183_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Agrave" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_192_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Aacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_193_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Acircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_194_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Atilde" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_195_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Adieresis" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_196_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Aring" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_197_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Egrave" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_200_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Eacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_201_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ecircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_202_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Edieresis" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_203_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Igrave" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_204_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Iacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_205_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Icircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_206_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Idieresis" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_207_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ntilde" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_209_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ograve" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_210_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Oacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_211_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ocircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_212_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Otilde" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_213_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Odieresis" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_214_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ugrave" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_217_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Uacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_218_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ucircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_219_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Udieresis" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_220_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Yacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_221_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - agrave" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_224_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - aacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_225_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - acircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_226_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - atilde" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_227_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - adieresis" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_228_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - aring" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_229_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - egrave" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_232_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - eacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_233_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ecircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_234_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - edieresis" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_235_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - igrave" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_236_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - iacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_237_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - icircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_238_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - idieresis" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_239_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ntilde" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_241_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ograve" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_242_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - oacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_243_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ocircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_244_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - otilde" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_245_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - odieresis" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_246_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ugrave" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_249_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - uacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_250_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ucircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_251_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - udieresis" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_252_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - yacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_253_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ydieresis" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_255_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Amacron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_256_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - amacron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_257_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Abreve" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_258_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - abreve" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_259_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Cacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_262_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - cacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_263_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ccircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_264_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ccircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_265_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Cdotaccent" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_266_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - cdotaccent" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_267_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ccaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_268_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ccaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_269_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Dcaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_270_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - dcaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_271_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Emacron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_274_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - emacron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_275_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ebreve" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_276_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ebreve" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_277_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Edotaccent" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_278_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - edotaccent" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_279_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ecaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_282_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ecaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_283_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Gcircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_284_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - gcircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_285_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Gbreve" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_286_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - gbreve" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_287_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Gdotaccent" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_288_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - gdotaccent" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_289_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Hcircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_292_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - hcircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_293_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Itilde" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_296_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - itilde" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_297_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Imacron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_298_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - imacron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_299_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ibreve" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_300_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ibreve" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_301_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Idotaccent" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_304_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Jcircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_308_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - jcircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_309_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Lacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_313_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - lacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_314_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Lcaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_317_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - lcaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_318_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ldot" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_319_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ldot" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_320_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Nacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_323_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - nacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_324_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ncaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_327_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ncaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_328_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Omacron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_332_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - omacron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_333_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Obreve" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_334_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - obreve" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_335_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ohungarumlaut" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_336_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ohungarumlaut" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_337_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Racute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_340_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - racute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_341_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Rcaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_344_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - rcaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_345_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Sacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_346_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - sacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_347_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Scircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_348_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - scircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_349_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Scaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_352_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - scaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_353_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Tcaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_356_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - tcaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_357_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Utilde" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_360_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - utilde" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_361_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Umacron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_362_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - umacron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_363_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ubreve" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_364_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ubreve" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_365_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Uring" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_366_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - uring" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_367_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Uhungarumlaut" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_368_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - uhungarumlaut" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_369_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Wcircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_372_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - wcircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_373_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ycircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_374_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ycircumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_375_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ydieresis" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_376_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Zacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_377_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - zacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_378_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Zdotaccent" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_379_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - zdotaccent" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_380_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Zcaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_381_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - zcaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_382_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Gcaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_486_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - gcaron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_487_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - circumflex" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_710_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - caron" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_711_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - &lt;Unknown Glyph&gt;" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_713_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - breve" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_728_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - dotaccent" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_729_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ring" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_730_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - tilde" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_732_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - hungarumlaut" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_733_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Wgrave" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_7808_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - wgrave" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_7809_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Wacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_7810_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - wacute" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_7811_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Wdieresis" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_7812_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - wdieresis" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_7813_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ygrave" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_7922_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ygrave" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_7923_small.png" /></a>
 	</div>
 </div>
 

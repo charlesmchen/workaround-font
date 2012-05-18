@@ -1,11 +1,58 @@
 <html>
 <head>
 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+goToUrl = function (option){
+//	alert('goToUrl: ' + option);
+	var val = $(option).val();
+	if (val != null && val != '') {
+//		alert('goToUrl!: ' + option);
+		window.top.location.href = val;
+//		window.top.location.replace(val);
+	}
+}
+
+enableKeyboardNavigation = function() {	
+
+	var previousLink = "page_0x6a.html";
+
+	var nextLink = "page_0x6c.html";
+
+//	alert('hi');
+
+	$(document).keydown(function(event) {
+//		alert('ho');
+		if ($('input:focus').length === 0) { // Don't scroll page if they are typing into an input field
+//			alert('ho: ' + event.which);
+			switch(event.which) {
+				case 74: // j
+				case 39: // --> (right arrow key)
+				goToUrl(nextLink);
+				break;
+
+				case 75: // k
+				case 37: // <-- (left arrow key)
+				goToUrl(previousLink);
+				break;
+			}
+		}
+	});
+}
+
+enableKeyboardNavigation();
+
+</script>
+
 <style type="text/css">
 <!--
 
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+  
 body {
 	color: #000; 
+	font:18px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background-color: #FFFFFF; 
 	text-align: left; 
 	margin: 5px; 
@@ -16,10 +63,18 @@ table {
 }
 
 a, blockquote, body, div, html, input, li, p, pre, span, table, td, textarea, th, tr, h1, h2, h3, img  { 
+/*
 	font-size: 11pt; 
 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', Arial, Helvetica, sans-serif;
+*/
 } 
-	
+
+a {
+  color:#39c;
+  font-weight:400;
+  text-decoration:none;
+}
+
 form { 
 	display: inline; 
 }
@@ -74,7 +129,10 @@ font-size: 2.0em;
 	display: inline;
 }
 
-.glyph_page_links,
+.glyph_page_links {
+	padding-top: 5px;
+}
+
 .glyph_images {
 	padding-top: 25px;
 }
@@ -95,24 +153,24 @@ font-size: 2.0em;
 	Workaround Font Comparison
 </div>
 
+<div class="topsection, emphasize">
+	<div>
+	Glyph: &#107; dec: 107 hex: 0x6b name: k (LATIN SMALL LETTER K)
+	</div>
+</div>
+
 <div class="topsection">
 	<a href="http://charlesmchen.github.com/workaround-font/">Back to Project Pages</a>
 </div>
 
-<div class="topsection, emphasize">
-	<div style="font-size: 1.2em; ">
-	Glyph: &#107; dec: 107 hex: 0x6b
-	</div>
-</div>
-
 <div class="glyph_page_links">
 	<div class="glyph_page_link">
-	Previous <a href="page_0x6a.html">&#106;</a>
+	 <a href="page_0x6a.html">Previous: &#106; (j)</a>
 	</div>
 </div>
 <div class="glyph_page_links">
 	<div class="glyph_page_link">
-	Next <a href="page_0x6c.html">&#108;</a>
+	 <a href="page_0x6c.html">Next: &#108; (l)</a>
 	</div>
 </div>
 
@@ -685,136 +743,178 @@ font-size: 2.0em;
 
 <div class="glyph_images">
 	<div class="glyph_image">
-  <a href="" title="Arial Rounded MT Bold - Regular"><img src="images/ArialRoundedMTBold_107_small.png" /></a>
+  <a href=" k" title="Arial Rounded MT Bold - Regular"><img src="images/ArialRoundedMTBold_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Bryant - Regular"><img src="images/Bryant-Bold_107_small.png" /></a>
+  <a href=" k" title="Bryant - Regular"><img src="images/Bryant-Bold_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Bryant - Regular"><img src="images/Bryant-BoldAlt_107_small.png" /></a>
+  <a href=" k" title="Bryant - Regular"><img src="images/Bryant-BoldAlt_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="CennerikEBold - Regular"><img src="images/CennerikEBold_107_small.png" /></a>
+  <a href=" k" title="CennerikEBold - Regular"><img src="images/CennerikEBold_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Frankfurter Medium Std - Regular"><img src="images/FrankfurterMediumStd_107_small.png" /></a>
+  <a href=" k" title="Comfortaa - Regular"><img src="images/Comfortaa_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="GE Inspira - Bold"><img src="images/GEInspira-Bold_107_small.png" /></a>
+  <a href=" k" title="Comfortaa - Bold"><img src="images/Comfortaa-Bold_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="GE Inspira - Bold Italic"><img src="images/GEInspira-BoldItalic_107_small.png" /></a>
+  <a href=" k" title="Frankfurter Medium Std - Regular"><img src="images/FrankfurterMediumStd_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Glow Gothic Overlay BF - Regular"><img src="images/GlowGothicOverlayBF_107_small.png" /></a>
+  <a href=" k" title="GE Inspira - Bold"><img src="images/GEInspira-Bold_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Gotham Rounded - Bold"><img src="images/GothamRounded-Bold_107_small.png" /></a>
+  <a href=" k" title="GE Inspira - Bold Italic"><img src="images/GEInspira-BoldItalic_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Gotham Rounded - Bold Italic"><img src="images/GothamRounded-BoldItalic_107_small.png" /></a>
+  <a href=" k" title="Glow Gothic Overlay BF - Regular"><img src="images/GlowGothicOverlayBF_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Gotham Rounded - Medium"><img src="images/GothamRounded-Medium_107_small.png" /></a>
+  <a href=" k" title="Gotham Rounded - Bold"><img src="images/GothamRounded-Bold_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Gotham Rounded - Medium Italic"><img src="images/GothamRounded-MediumItalic_107_small.png" /></a>
+  <a href=" k" title="Gotham Rounded - Bold Italic"><img src="images/GothamRounded-BoldItalic_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Helvetica Rounded LT Std - Bold"><img src="images/HelveticaRoundedLTStd-Bd_107_small.png" /></a>
+  <a href=" k" title="Gotham Rounded - Medium"><img src="images/GothamRounded-Medium_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Helvetica Rounded LT Std - Bold Oblique"><img src="images/HelveticaRoundedLTStd-BdO_107_small.png" /></a>
+  <a href=" k" title="Gotham Rounded - Medium Italic"><img src="images/GothamRounded-MediumItalic_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Hiruko - Regular"><img src="images/Hiruko_107_small.png" /></a>
+  <a href=" k" title="Helvetica Rounded LT Std - Bold"><img src="images/HelveticaRoundedLTStd-Bd_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Hiruko - Black Alternate"><img src="images/Hiruko-BlackAlternate_107_small.png" /></a>
+  <a href=" k" title="Helvetica Rounded LT Std - Bold Oblique"><img src="images/HelveticaRoundedLTStd-BdO_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Maagkramp - Regular"><img src="images/Maagkramp_107_small.png" /></a>
+  <a href=" k" title="Hiruko - Regular"><img src="images/Hiruko_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="MgOpen Modata - Bold"><img src="images/MgOpenModata-Bold_107_small.png" /></a>
+  <a href=" k" title="Hiruko - Black Alternate"><img src="images/Hiruko-BlackAlternate_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="MgOpen Modata - BoldOblique"><img src="images/MgOpenModata-BoldOblique_107_small.png" /></a>
+  <a href=" k" title="Maagkramp - Regular"><img src="images/Maagkramp_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Normalise Din MN - Regular"><img src="images/NormaliseDinMN_107_small.png" /></a>
+  <a href=" k" title="MgOpen Modata - Bold"><img src="images/MgOpenModata-Bold_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Predicate Rounded - Regular"><img src="images/PredicateRounded_107_small.png" /></a>
+  <a href=" k" title="MgOpen Modata - BoldOblique"><img src="images/MgOpenModata-BoldOblique_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Predicate Rounded - Bold"><img src="images/PredicateRounded-Bold_107_small.png" /></a>
+  <a href=" k" title="Normalise Din MN - Regular"><img src="images/NormaliseDinMN_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Predicate Rounded - Bold Italic"><img src="images/PredicateRounded-BoldItalic_107_small.png" /></a>
+  <a href=" k" title="Predicate Rounded - Regular"><img src="images/PredicateRounded_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Predicate Rounded - Italic"><img src="images/PredicateRounded-Italic_107_small.png" /></a>
+  <a href=" k" title="Predicate Rounded - Bold"><img src="images/PredicateRounded-Bold_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Simpliciter Sans - Bold"><img src="images/SimpliciterSans-Bold_107_small.png" /></a>
+  <a href=" k" title="Predicate Rounded - Bold Italic"><img src="images/PredicateRounded-BoldItalic_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Book"><img src="images/StagSansRound-Book_107_small.png" /></a>
+  <a href=" k" title="Predicate Rounded - Italic"><img src="images/PredicateRounded-Italic_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Book Italic"><img src="images/StagSansRound-BookItalic_107_small.png" /></a>
+  <a href=" k" title="Simpliciter Sans - Bold"><img src="images/SimpliciterSans-Bold_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Medium"><img src="images/StagSansRound-Medium_107_small.png" /></a>
+  <a href=" k" title="Stag Sans Round - Book"><img src="images/StagSansRound-Book_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Medium Italic"><img src="images/StagSansRound-MediumItalic_107_small.png" /></a>
+  <a href=" k" title="Stag Sans Round - Book Italic"><img src="images/StagSansRound-BookItalic_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Semibold"><img src="images/StagSansRound-Semibold_107_small.png" /></a>
+  <a href=" k" title="Stag Sans Round - Medium"><img src="images/StagSansRound-Medium_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Semibold Italic"><img src="images/StagSansRound-SemiboldItalic_107_small.png" /></a>
+  <a href=" k" title="Stag Sans Round - Medium Italic"><img src="images/StagSansRound-MediumItalic_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Book"><img src="images/TWCRound-Book_107_small.png" /></a>
+  <a href=" k" title="Stag Sans Round - Semibold"><img src="images/StagSansRound-Semibold_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Book Italic"><img src="images/TWCRound-BookItalic_107_small.png" /></a>
+  <a href=" k" title="Stag Sans Round - Semibold Italic"><img src="images/StagSansRound-SemiboldItalic_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Medium"><img src="images/TWCRound-Medium_107_small.png" /></a>
+  <a href=" k" title="TWC Round - Book"><img src="images/TWCRound-Book_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Medium Italic"><img src="images/TWCRound-MediumItalic_107_small.png" /></a>
+  <a href=" k" title="TWC Round - Book Italic"><img src="images/TWCRound-BookItalic_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Semibold"><img src="images/TWCRound-Semibold_107_small.png" /></a>
+  <a href=" k" title="TWC Round - Medium"><img src="images/TWCRound-Medium_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Semibold Italic"><img src="images/TWCRound-SemiboldItalic_107_small.png" /></a>
+  <a href=" k" title="TWC Round - Medium Italic"><img src="images/TWCRound-MediumItalic_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Ubuntu Titling - Bold"><img src="images/UbuntuTitling-Bold_107_small.png" /></a>
+  <a href=" k" title="TWC Round - Semibold"><img src="images/TWCRound-Semibold_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VAG Rounded Std - Black"><img src="images/VAGRoundedStd-Black_107_small.png" /></a>
+  <a href=" k" title="TWC Round - Semibold Italic"><img src="images/TWCRound-SemiboldItalic_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VAG Rounded Std - Bold"><img src="images/VAGRoundedStd-Bold_107_small.png" /></a>
+  <a href=" k" title="Ubuntu Titling - Bold"><img src="images/UbuntuTitling-Bold_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VAG Rounded Std - Light"><img src="images/VAGRoundedStd-Light_107_small.png" /></a>
+  <a href=" k" title="VAG Rounded Std - Black"><img src="images/VAGRoundedStd-Black_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VAG Rounded Std - Thin"><img src="images/VAGRoundedStd-Thin_107_small.png" /></a>
+  <a href=" k" title="VAG Rounded Std - Bold"><img src="images/VAGRoundedStd-Bold_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VariableBlack - Regular"><img src="images/VariableBlack_107_small.png" /></a>
+  <a href=" k" title="VAG Rounded Std - Light"><img src="images/VAGRoundedStd-Light_107_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VariableBlack - Italic"><img src="images/VariableBlack-Italic_107_small.png" /></a>
+  <a href=" k" title="VAG Rounded Std - Thin"><img src="images/VAGRoundedStd-Thin_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" k" title="VariableBlack - Regular"><img src="images/VariableBlack_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" k" title="VariableBlack - Italic"><img src="images/VariableBlack-Italic_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" k" title="Workaround - Round Bold"><img src="images/Workaround-RoundBold_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" k" title="Workaround - Round Bold Italic"><img src="images/Workaround-RoundBoldItalic_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" k" title="Workaround - Round Italic"><img src="images/Workaround-RoundItalic_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" k" title="Workaround - Round Roman"><img src="images/Workaround-RoundRoman_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" k" title="Workaround - Round SemiBold"><img src="images/Workaround-RoundSemiBold_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" k" title="Workaround - Round SemiBold Italic"><img src="images/Workaround-RoundSemiBoldItalic_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" k" title="Workaround - SemiRound Bold"><img src="images/Workaround-SemiRoundBold_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" k" title="Workaround - SemiRound Bold Italic"><img src="images/Workaround-SemiRoundBoldItalic_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" k" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" k" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" k" title="Workaround - SemiRound SemiBold"><img src="images/Workaround-SemiRoundSemiBold_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" k" title="Workaround - SemiRound SemiBold Italic"><img src="images/Workaround-SemiRoundSemiBoldItalic_107_small.png" /></a>
 	</div>
 </div>
 

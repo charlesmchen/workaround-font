@@ -1,11 +1,59 @@
 <html>
 <head>
 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+goToUrl = function (option){
+//	alert('goToUrl: ' + option);
+	var val = $(option).val();
+	if (val != null && val != '') {
+//		alert('goToUrl!: ' + option);
+		window.top.location.href = val;
+//		window.top.location.replace(val);
+	}
+}
+
+enableKeyboardNavigation = function() {	
+
+	var previousLink = "page_Workaround-SemiRoundBoldItalic.html";
+
+	var nextLink = "page_Workaround-SemiRoundRoman.html";
+
+//	alert('hi');
+
+	$(document).keydown(function(event) {
+//		alert('ho');
+		if ($('input:focus').length === 0) { // Don't scroll page if they are typing into an input field
+//			alert('ho: ' + event.which);
+			switch(event.which) {
+				case 74: // j
+				case 39: // --> (right arrow key)
+				goToUrl(nextLink);
+				break;
+
+				case 75: // k
+				case 37: // <-- (left arrow key)
+				goToUrl(previousLink);
+				break;
+			}
+		}
+	});
+}
+
+enableKeyboardNavigation();
+
+</script>
+
 <style type="text/css">
 <!--
 
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+  
 body {
 	color: #000; 
+	font:18px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background-color: #FFFFFF; 
 	text-align: left; 
 	margin: 5px; 
@@ -16,9 +64,18 @@ table {
 }
 
 a, blockquote, body, div, html, input, li, p, pre, span, table, td, textarea, th, tr, h1, h2, h3, img  { 
+/*
 	font-size: 11pt; 
 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', Arial, Helvetica, sans-serif;
+*/
 } 
+
+a {
+  color:#39c;
+  font-weight:400;
+  text-decoration:none;
+}
+
 	
 form { 
 	display: inline; 
@@ -74,7 +131,10 @@ font-size: 2.0em;
 	display: inline;
 }
 
-.glyph_page_links,
+.glyph_page_links {
+	padding-top: 5px;
+}
+
 .glyph_images {
 	padding-top: 25px;
 }
@@ -101,14 +161,14 @@ font-size: 2.0em;
 	Workaround Font Comparison
 </div>
 
-<div class="topsection">
-	<a href="http://charlesmchen.github.com/workaround-font/">Back to Project Pages</a>
-</div>
-
 <div class="topsection, emphasize">
-	<div style="font-size: 1.2em; ">
+	<div>
 	Font: SemiRound Italic
 	</div>
+</div>
+
+<div class="topsection">
+	<a href="http://charlesmchen.github.com/workaround-font/">Back to Project Pages</a>
 </div>
 
 <div class="glyph_page_links">
@@ -164,115 +224,769 @@ font-size: 2.0em;
 
 <div class="glyph_images">
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_33_small.png" /></a>
+  <a href=" - exclam" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_33_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_48_small.png" /></a>
+  <a href=" - quotedbl" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_34_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_49_small.png" /></a>
+  <a href=" - numbersign" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_50_small.png" /></a>
+  <a href=" - dollar" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_36_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_51_small.png" /></a>
+  <a href=" - percent" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_37_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_52_small.png" /></a>
+  <a href=" - ampersand" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_38_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_53_small.png" /></a>
+  <a href=" - quotesingle" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_39_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_54_small.png" /></a>
+  <a href=" - parenleft" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_40_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_55_small.png" /></a>
+  <a href=" - parenright" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_41_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_56_small.png" /></a>
+  <a href=" - asterisk" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_42_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_57_small.png" /></a>
+  <a href=" - plus" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_43_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_65_small.png" /></a>
+  <a href=" - comma" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_66_small.png" /></a>
+  <a href=" - hyphen" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_45_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_67_small.png" /></a>
+  <a href=" - period" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_46_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_68_small.png" /></a>
+  <a href=" - slash" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_47_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_69_small.png" /></a>
+  <a href=" - zero" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_48_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_70_small.png" /></a>
+  <a href=" - one" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_49_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_71_small.png" /></a>
+  <a href=" - two" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_50_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_72_small.png" /></a>
+  <a href=" - three" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_51_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_73_small.png" /></a>
+  <a href=" - four" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_52_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_74_small.png" /></a>
+  <a href=" - five" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_53_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_75_small.png" /></a>
+  <a href=" - six" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_54_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_76_small.png" /></a>
+  <a href=" - seven" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_55_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_77_small.png" /></a>
+  <a href=" - eight" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_56_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_78_small.png" /></a>
+  <a href=" - nine" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_57_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_79_small.png" /></a>
+  <a href=" - colon" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_58_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_80_small.png" /></a>
+  <a href=" - semicolon" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_59_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_81_small.png" /></a>
+  <a href=" - less" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_60_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_82_small.png" /></a>
+  <a href=" - equal" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_61_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_83_small.png" /></a>
+  <a href=" - greater" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_62_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_84_small.png" /></a>
+  <a href=" - question" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_63_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_85_small.png" /></a>
+  <a href=" - A" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_65_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_86_small.png" /></a>
+  <a href=" - B" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_66_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_87_small.png" /></a>
+  <a href=" - C" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_67_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_88_small.png" /></a>
+  <a href=" - D" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_68_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_89_small.png" /></a>
+  <a href=" - E" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_69_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_90_small.png" /></a>
+  <a href=" - F" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_70_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - G" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_71_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - H" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_72_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - I" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_73_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - J" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_74_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - K" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_75_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - L" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_76_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - M" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_77_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - N" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_78_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - O" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_79_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - P" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_80_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Q" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_81_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - R" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_82_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - S" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_83_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - T" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_84_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - U" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_85_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - V" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_86_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - W" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_87_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - X" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_88_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Y" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_89_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Z" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_90_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - bracketleft" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_91_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - backslash" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_92_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - bracketright" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_93_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - asciicircum" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_94_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - underscore" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_95_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - grave" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_96_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - a" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_97_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - b" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_98_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - c" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_99_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - d" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_100_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - e" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_101_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - f" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_102_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - g" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_103_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - h" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_104_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - i" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_105_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - j" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_106_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - k" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_107_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - l" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_108_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - m" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_109_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - n" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_110_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - o" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_111_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - p" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_112_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - q" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_113_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - r" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_114_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - s" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_115_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - t" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_116_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - u" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_117_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - v" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_118_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - w" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_119_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - x" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_120_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - y" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_121_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - z" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_122_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - braceleft" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_123_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - bar" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_124_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - braceright" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_125_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - asciitilde" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_126_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - exclamdown" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_161_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - dieresis" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_168_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - macron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_175_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - acute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_180_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - periodcentered" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_183_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Agrave" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_192_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Aacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_193_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Acircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_194_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Atilde" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_195_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Adieresis" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_196_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Aring" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_197_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Egrave" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_200_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Eacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_201_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ecircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_202_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Edieresis" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_203_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Igrave" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_204_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Iacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_205_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Icircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_206_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Idieresis" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_207_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ntilde" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_209_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ograve" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_210_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Oacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_211_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ocircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_212_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Otilde" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_213_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Odieresis" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_214_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ugrave" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_217_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Uacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_218_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ucircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_219_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Udieresis" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_220_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Yacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_221_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - agrave" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_224_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - aacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_225_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - acircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_226_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - atilde" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_227_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - adieresis" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_228_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - aring" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_229_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - egrave" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_232_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - eacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_233_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ecircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_234_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - edieresis" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_235_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - igrave" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_236_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - iacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_237_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - icircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_238_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - idieresis" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_239_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ntilde" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_241_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ograve" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_242_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - oacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_243_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ocircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_244_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - otilde" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_245_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - odieresis" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_246_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ugrave" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_249_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - uacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_250_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ucircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_251_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - udieresis" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_252_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - yacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_253_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ydieresis" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_255_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Amacron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_256_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - amacron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_257_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Abreve" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_258_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - abreve" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_259_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Cacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_262_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - cacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_263_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ccircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_264_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ccircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_265_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Cdotaccent" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_266_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - cdotaccent" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_267_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ccaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_268_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ccaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_269_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Dcaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_270_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - dcaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_271_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Emacron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_274_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - emacron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_275_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ebreve" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_276_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ebreve" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_277_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Edotaccent" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_278_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - edotaccent" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_279_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ecaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_282_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ecaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_283_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Gcircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_284_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - gcircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_285_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Gbreve" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_286_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - gbreve" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_287_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Gdotaccent" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_288_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - gdotaccent" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_289_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Hcircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_292_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - hcircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_293_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Itilde" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_296_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - itilde" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_297_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Imacron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_298_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - imacron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_299_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ibreve" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_300_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ibreve" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_301_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Idotaccent" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_304_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Jcircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_308_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - jcircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_309_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Lacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_313_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - lacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_314_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Lcaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_317_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - lcaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_318_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ldot" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_319_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ldot" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_320_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Nacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_323_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - nacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_324_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ncaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_327_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ncaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_328_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Omacron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_332_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - omacron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_333_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Obreve" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_334_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - obreve" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_335_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ohungarumlaut" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_336_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ohungarumlaut" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_337_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Racute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_340_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - racute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_341_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Rcaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_344_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - rcaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_345_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Sacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_346_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - sacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_347_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Scircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_348_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - scircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_349_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Scaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_352_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - scaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_353_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Tcaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_356_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - tcaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_357_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Utilde" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_360_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - utilde" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_361_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Umacron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_362_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - umacron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_363_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ubreve" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_364_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ubreve" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_365_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Uring" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_366_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - uring" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_367_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Uhungarumlaut" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_368_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - uhungarumlaut" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_369_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Wcircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_372_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - wcircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_373_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ycircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_374_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ycircumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_375_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ydieresis" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_376_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Zacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_377_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - zacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_378_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Zdotaccent" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_379_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - zdotaccent" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_380_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Zcaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_381_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - zcaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_382_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Gcaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_486_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - gcaron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_487_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - circumflex" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_710_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - caron" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_711_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - &lt;Unknown Glyph&gt;" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_713_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - breve" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_728_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - dotaccent" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_729_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ring" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_730_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - tilde" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_732_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - hungarumlaut" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_733_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Wgrave" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_7808_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - wgrave" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_7809_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Wacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_7810_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - wacute" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_7811_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Wdieresis" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_7812_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - wdieresis" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_7813_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - Ygrave" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_7922_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" - ygrave" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_7923_small.png" /></a>
 	</div>
 </div>
 

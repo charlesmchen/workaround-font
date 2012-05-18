@@ -1,11 +1,58 @@
 <html>
 <head>
 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+goToUrl = function (option){
+//	alert('goToUrl: ' + option);
+	var val = $(option).val();
+	if (val != null && val != '') {
+//		alert('goToUrl!: ' + option);
+		window.top.location.href = val;
+//		window.top.location.replace(val);
+	}
+}
+
+enableKeyboardNavigation = function() {	
+
+	var previousLink = "page_0x22.html";
+
+	var nextLink = "page_0x24.html";
+
+//	alert('hi');
+
+	$(document).keydown(function(event) {
+//		alert('ho');
+		if ($('input:focus').length === 0) { // Don't scroll page if they are typing into an input field
+//			alert('ho: ' + event.which);
+			switch(event.which) {
+				case 74: // j
+				case 39: // --> (right arrow key)
+				goToUrl(nextLink);
+				break;
+
+				case 75: // k
+				case 37: // <-- (left arrow key)
+				goToUrl(previousLink);
+				break;
+			}
+		}
+	});
+}
+
+enableKeyboardNavigation();
+
+</script>
+
 <style type="text/css">
 <!--
 
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+  
 body {
 	color: #000; 
+	font:18px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background-color: #FFFFFF; 
 	text-align: left; 
 	margin: 5px; 
@@ -16,10 +63,18 @@ table {
 }
 
 a, blockquote, body, div, html, input, li, p, pre, span, table, td, textarea, th, tr, h1, h2, h3, img  { 
+/*
 	font-size: 11pt; 
 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', Arial, Helvetica, sans-serif;
+*/
 } 
-	
+
+a {
+  color:#39c;
+  font-weight:400;
+  text-decoration:none;
+}
+
 form { 
 	display: inline; 
 }
@@ -74,7 +129,10 @@ font-size: 2.0em;
 	display: inline;
 }
 
-.glyph_page_links,
+.glyph_page_links {
+	padding-top: 5px;
+}
+
 .glyph_images {
 	padding-top: 25px;
 }
@@ -95,24 +153,24 @@ font-size: 2.0em;
 	Workaround Font Comparison
 </div>
 
+<div class="topsection, emphasize">
+	<div>
+	Glyph: &#35; dec: 35 hex: 0x23 name: numbersign (NUMBER SIGN)
+	</div>
+</div>
+
 <div class="topsection">
 	<a href="http://charlesmchen.github.com/workaround-font/">Back to Project Pages</a>
 </div>
 
-<div class="topsection, emphasize">
-	<div style="font-size: 1.2em; ">
-	Glyph: &#35; dec: 35 hex: 0x23
-	</div>
-</div>
-
 <div class="glyph_page_links">
 	<div class="glyph_page_link">
-	Previous <a href="page_0x22.html">&#34;</a>
+	 <a href="page_0x22.html">Previous: &#34; (quotedbl)</a>
 	</div>
 </div>
 <div class="glyph_page_links">
 	<div class="glyph_page_link">
-	Next <a href="page_0x24.html">&#36;</a>
+	 <a href="page_0x24.html">Next: &#36; (dollar)</a>
 	</div>
 </div>
 
@@ -685,130 +743,172 @@ font-size: 2.0em;
 
 <div class="glyph_images">
 	<div class="glyph_image">
-  <a href="" title="Arial Rounded MT Bold - Regular"><img src="images/ArialRoundedMTBold_35_small.png" /></a>
+  <a href=" numbersign" title="Arial Rounded MT Bold - Regular"><img src="images/ArialRoundedMTBold_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Bryant - Regular"><img src="images/Bryant-Bold_35_small.png" /></a>
+  <a href=" numbersign" title="Bryant - Regular"><img src="images/Bryant-Bold_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Bryant - Regular"><img src="images/Bryant-BoldAlt_35_small.png" /></a>
+  <a href=" numbersign" title="Bryant - Regular"><img src="images/Bryant-BoldAlt_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="CennerikEBold - Regular"><img src="images/CennerikEBold_35_small.png" /></a>
+  <a href=" numbersign" title="CennerikEBold - Regular"><img src="images/CennerikEBold_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="GE Inspira - Bold"><img src="images/GEInspira-Bold_35_small.png" /></a>
+  <a href=" numbersign" title="Comfortaa - Regular"><img src="images/Comfortaa_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="GE Inspira - Bold Italic"><img src="images/GEInspira-BoldItalic_35_small.png" /></a>
+  <a href=" numbersign" title="Comfortaa - Bold"><img src="images/Comfortaa-Bold_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Glow Gothic Overlay BF - Regular"><img src="images/GlowGothicOverlayBF_35_small.png" /></a>
+  <a href=" numbersign" title="GE Inspira - Bold"><img src="images/GEInspira-Bold_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Gotham Rounded - Bold"><img src="images/GothamRounded-Bold_35_small.png" /></a>
+  <a href=" numbersign" title="GE Inspira - Bold Italic"><img src="images/GEInspira-BoldItalic_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Gotham Rounded - Bold Italic"><img src="images/GothamRounded-BoldItalic_35_small.png" /></a>
+  <a href=" numbersign" title="Glow Gothic Overlay BF - Regular"><img src="images/GlowGothicOverlayBF_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Gotham Rounded - Medium"><img src="images/GothamRounded-Medium_35_small.png" /></a>
+  <a href=" numbersign" title="Gotham Rounded - Bold"><img src="images/GothamRounded-Bold_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Gotham Rounded - Medium Italic"><img src="images/GothamRounded-MediumItalic_35_small.png" /></a>
+  <a href=" numbersign" title="Gotham Rounded - Bold Italic"><img src="images/GothamRounded-BoldItalic_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Helvetica Rounded LT Std - Bold"><img src="images/HelveticaRoundedLTStd-Bd_35_small.png" /></a>
+  <a href=" numbersign" title="Gotham Rounded - Medium"><img src="images/GothamRounded-Medium_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Helvetica Rounded LT Std - Bold Oblique"><img src="images/HelveticaRoundedLTStd-BdO_35_small.png" /></a>
+  <a href=" numbersign" title="Gotham Rounded - Medium Italic"><img src="images/GothamRounded-MediumItalic_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Hiruko - Regular"><img src="images/Hiruko_35_small.png" /></a>
+  <a href=" numbersign" title="Helvetica Rounded LT Std - Bold"><img src="images/HelveticaRoundedLTStd-Bd_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Hiruko - Black Alternate"><img src="images/Hiruko-BlackAlternate_35_small.png" /></a>
+  <a href=" numbersign" title="Helvetica Rounded LT Std - Bold Oblique"><img src="images/HelveticaRoundedLTStd-BdO_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Maagkramp - Regular"><img src="images/Maagkramp_35_small.png" /></a>
+  <a href=" numbersign" title="Hiruko - Regular"><img src="images/Hiruko_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="MgOpen Modata - Bold"><img src="images/MgOpenModata-Bold_35_small.png" /></a>
+  <a href=" numbersign" title="Hiruko - Black Alternate"><img src="images/Hiruko-BlackAlternate_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="MgOpen Modata - BoldOblique"><img src="images/MgOpenModata-BoldOblique_35_small.png" /></a>
+  <a href=" numbersign" title="Maagkramp - Regular"><img src="images/Maagkramp_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Predicate Rounded - Regular"><img src="images/PredicateRounded_35_small.png" /></a>
+  <a href=" numbersign" title="MgOpen Modata - Bold"><img src="images/MgOpenModata-Bold_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Predicate Rounded - Bold"><img src="images/PredicateRounded-Bold_35_small.png" /></a>
+  <a href=" numbersign" title="MgOpen Modata - BoldOblique"><img src="images/MgOpenModata-BoldOblique_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Predicate Rounded - Bold Italic"><img src="images/PredicateRounded-BoldItalic_35_small.png" /></a>
+  <a href=" numbersign" title="Predicate Rounded - Regular"><img src="images/PredicateRounded_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Predicate Rounded - Italic"><img src="images/PredicateRounded-Italic_35_small.png" /></a>
+  <a href=" numbersign" title="Predicate Rounded - Bold"><img src="images/PredicateRounded-Bold_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Simpliciter Sans - Bold"><img src="images/SimpliciterSans-Bold_35_small.png" /></a>
+  <a href=" numbersign" title="Predicate Rounded - Bold Italic"><img src="images/PredicateRounded-BoldItalic_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Book"><img src="images/StagSansRound-Book_35_small.png" /></a>
+  <a href=" numbersign" title="Predicate Rounded - Italic"><img src="images/PredicateRounded-Italic_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Book Italic"><img src="images/StagSansRound-BookItalic_35_small.png" /></a>
+  <a href=" numbersign" title="Simpliciter Sans - Bold"><img src="images/SimpliciterSans-Bold_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Medium"><img src="images/StagSansRound-Medium_35_small.png" /></a>
+  <a href=" numbersign" title="Stag Sans Round - Book"><img src="images/StagSansRound-Book_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Medium Italic"><img src="images/StagSansRound-MediumItalic_35_small.png" /></a>
+  <a href=" numbersign" title="Stag Sans Round - Book Italic"><img src="images/StagSansRound-BookItalic_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Semibold"><img src="images/StagSansRound-Semibold_35_small.png" /></a>
+  <a href=" numbersign" title="Stag Sans Round - Medium"><img src="images/StagSansRound-Medium_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Semibold Italic"><img src="images/StagSansRound-SemiboldItalic_35_small.png" /></a>
+  <a href=" numbersign" title="Stag Sans Round - Medium Italic"><img src="images/StagSansRound-MediumItalic_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Book"><img src="images/TWCRound-Book_35_small.png" /></a>
+  <a href=" numbersign" title="Stag Sans Round - Semibold"><img src="images/StagSansRound-Semibold_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Book Italic"><img src="images/TWCRound-BookItalic_35_small.png" /></a>
+  <a href=" numbersign" title="Stag Sans Round - Semibold Italic"><img src="images/StagSansRound-SemiboldItalic_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Medium"><img src="images/TWCRound-Medium_35_small.png" /></a>
+  <a href=" numbersign" title="TWC Round - Book"><img src="images/TWCRound-Book_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Medium Italic"><img src="images/TWCRound-MediumItalic_35_small.png" /></a>
+  <a href=" numbersign" title="TWC Round - Book Italic"><img src="images/TWCRound-BookItalic_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Semibold"><img src="images/TWCRound-Semibold_35_small.png" /></a>
+  <a href=" numbersign" title="TWC Round - Medium"><img src="images/TWCRound-Medium_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Semibold Italic"><img src="images/TWCRound-SemiboldItalic_35_small.png" /></a>
+  <a href=" numbersign" title="TWC Round - Medium Italic"><img src="images/TWCRound-MediumItalic_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Ubuntu Titling - Bold"><img src="images/UbuntuTitling-Bold_35_small.png" /></a>
+  <a href=" numbersign" title="TWC Round - Semibold"><img src="images/TWCRound-Semibold_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VAG Rounded Std - Black"><img src="images/VAGRoundedStd-Black_35_small.png" /></a>
+  <a href=" numbersign" title="TWC Round - Semibold Italic"><img src="images/TWCRound-SemiboldItalic_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VAG Rounded Std - Bold"><img src="images/VAGRoundedStd-Bold_35_small.png" /></a>
+  <a href=" numbersign" title="Ubuntu Titling - Bold"><img src="images/UbuntuTitling-Bold_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VAG Rounded Std - Light"><img src="images/VAGRoundedStd-Light_35_small.png" /></a>
+  <a href=" numbersign" title="VAG Rounded Std - Black"><img src="images/VAGRoundedStd-Black_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VAG Rounded Std - Thin"><img src="images/VAGRoundedStd-Thin_35_small.png" /></a>
+  <a href=" numbersign" title="VAG Rounded Std - Bold"><img src="images/VAGRoundedStd-Bold_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VariableBlack - Regular"><img src="images/VariableBlack_35_small.png" /></a>
+  <a href=" numbersign" title="VAG Rounded Std - Light"><img src="images/VAGRoundedStd-Light_35_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VariableBlack - Italic"><img src="images/VariableBlack-Italic_35_small.png" /></a>
+  <a href=" numbersign" title="VAG Rounded Std - Thin"><img src="images/VAGRoundedStd-Thin_35_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" numbersign" title="VariableBlack - Regular"><img src="images/VariableBlack_35_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" numbersign" title="VariableBlack - Italic"><img src="images/VariableBlack-Italic_35_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" numbersign" title="Workaround - Round Bold"><img src="images/Workaround-RoundBold_35_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" numbersign" title="Workaround - Round Bold Italic"><img src="images/Workaround-RoundBoldItalic_35_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" numbersign" title="Workaround - Round Italic"><img src="images/Workaround-RoundItalic_35_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" numbersign" title="Workaround - Round Roman"><img src="images/Workaround-RoundRoman_35_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" numbersign" title="Workaround - Round SemiBold"><img src="images/Workaround-RoundSemiBold_35_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" numbersign" title="Workaround - Round SemiBold Italic"><img src="images/Workaround-RoundSemiBoldItalic_35_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" numbersign" title="Workaround - SemiRound Bold"><img src="images/Workaround-SemiRoundBold_35_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" numbersign" title="Workaround - SemiRound Bold Italic"><img src="images/Workaround-SemiRoundBoldItalic_35_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" numbersign" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_35_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" numbersign" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_35_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" numbersign" title="Workaround - SemiRound SemiBold"><img src="images/Workaround-SemiRoundSemiBold_35_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" numbersign" title="Workaround - SemiRound SemiBold Italic"><img src="images/Workaround-SemiRoundSemiBoldItalic_35_small.png" /></a>
 	</div>
 </div>
 

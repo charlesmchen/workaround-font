@@ -1,11 +1,58 @@
 <html>
 <head>
 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+goToUrl = function (option){
+//	alert('goToUrl: ' + option);
+	var val = $(option).val();
+	if (val != null && val != '') {
+//		alert('goToUrl!: ' + option);
+		window.top.location.href = val;
+//		window.top.location.replace(val);
+	}
+}
+
+enableKeyboardNavigation = function() {	
+
+	var previousLink = "page_0x2b.html";
+
+	var nextLink = "page_0x2d.html";
+
+//	alert('hi');
+
+	$(document).keydown(function(event) {
+//		alert('ho');
+		if ($('input:focus').length === 0) { // Don't scroll page if they are typing into an input field
+//			alert('ho: ' + event.which);
+			switch(event.which) {
+				case 74: // j
+				case 39: // --> (right arrow key)
+				goToUrl(nextLink);
+				break;
+
+				case 75: // k
+				case 37: // <-- (left arrow key)
+				goToUrl(previousLink);
+				break;
+			}
+		}
+	});
+}
+
+enableKeyboardNavigation();
+
+</script>
+
 <style type="text/css">
 <!--
 
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+  
 body {
 	color: #000; 
+	font:18px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background-color: #FFFFFF; 
 	text-align: left; 
 	margin: 5px; 
@@ -16,10 +63,18 @@ table {
 }
 
 a, blockquote, body, div, html, input, li, p, pre, span, table, td, textarea, th, tr, h1, h2, h3, img  { 
+/*
 	font-size: 11pt; 
 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', Arial, Helvetica, sans-serif;
+*/
 } 
-	
+
+a {
+  color:#39c;
+  font-weight:400;
+  text-decoration:none;
+}
+
 form { 
 	display: inline; 
 }
@@ -74,7 +129,10 @@ font-size: 2.0em;
 	display: inline;
 }
 
-.glyph_page_links,
+.glyph_page_links {
+	padding-top: 5px;
+}
+
 .glyph_images {
 	padding-top: 25px;
 }
@@ -95,24 +153,24 @@ font-size: 2.0em;
 	Workaround Font Comparison
 </div>
 
+<div class="topsection, emphasize">
+	<div>
+	Glyph: &#44; dec: 44 hex: 0x2c name: comma (COMMA)
+	</div>
+</div>
+
 <div class="topsection">
 	<a href="http://charlesmchen.github.com/workaround-font/">Back to Project Pages</a>
 </div>
 
-<div class="topsection, emphasize">
-	<div style="font-size: 1.2em; ">
-	Glyph: &#44; dec: 44 hex: 0x2c
-	</div>
-</div>
-
 <div class="glyph_page_links">
 	<div class="glyph_page_link">
-	Previous <a href="page_0x2b.html">&#43;</a>
+	 <a href="page_0x2b.html">Previous: &#43; (plus)</a>
 	</div>
 </div>
 <div class="glyph_page_links">
 	<div class="glyph_page_link">
-	Next <a href="page_0x2d.html">&#45;</a>
+	 <a href="page_0x2d.html">Next: &#45; (hyphen)</a>
 	</div>
 </div>
 
@@ -685,136 +743,178 @@ font-size: 2.0em;
 
 <div class="glyph_images">
 	<div class="glyph_image">
-  <a href="" title="Arial Rounded MT Bold - Regular"><img src="images/ArialRoundedMTBold_44_small.png" /></a>
+  <a href=" comma" title="Arial Rounded MT Bold - Regular"><img src="images/ArialRoundedMTBold_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Bryant - Regular"><img src="images/Bryant-Bold_44_small.png" /></a>
+  <a href=" comma" title="Bryant - Regular"><img src="images/Bryant-Bold_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Bryant - Regular"><img src="images/Bryant-BoldAlt_44_small.png" /></a>
+  <a href=" comma" title="Bryant - Regular"><img src="images/Bryant-BoldAlt_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="CennerikEBold - Regular"><img src="images/CennerikEBold_44_small.png" /></a>
+  <a href=" comma" title="CennerikEBold - Regular"><img src="images/CennerikEBold_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Frankfurter Medium Std - Regular"><img src="images/FrankfurterMediumStd_44_small.png" /></a>
+  <a href=" comma" title="Comfortaa - Regular"><img src="images/Comfortaa_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="GE Inspira - Bold"><img src="images/GEInspira-Bold_44_small.png" /></a>
+  <a href=" comma" title="Comfortaa - Bold"><img src="images/Comfortaa-Bold_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="GE Inspira - Bold Italic"><img src="images/GEInspira-BoldItalic_44_small.png" /></a>
+  <a href=" comma" title="Frankfurter Medium Std - Regular"><img src="images/FrankfurterMediumStd_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Glow Gothic Overlay BF - Regular"><img src="images/GlowGothicOverlayBF_44_small.png" /></a>
+  <a href=" comma" title="GE Inspira - Bold"><img src="images/GEInspira-Bold_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Gotham Rounded - Bold"><img src="images/GothamRounded-Bold_44_small.png" /></a>
+  <a href=" comma" title="GE Inspira - Bold Italic"><img src="images/GEInspira-BoldItalic_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Gotham Rounded - Bold Italic"><img src="images/GothamRounded-BoldItalic_44_small.png" /></a>
+  <a href=" comma" title="Glow Gothic Overlay BF - Regular"><img src="images/GlowGothicOverlayBF_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Gotham Rounded - Medium"><img src="images/GothamRounded-Medium_44_small.png" /></a>
+  <a href=" comma" title="Gotham Rounded - Bold"><img src="images/GothamRounded-Bold_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Gotham Rounded - Medium Italic"><img src="images/GothamRounded-MediumItalic_44_small.png" /></a>
+  <a href=" comma" title="Gotham Rounded - Bold Italic"><img src="images/GothamRounded-BoldItalic_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Helvetica Rounded LT Std - Bold"><img src="images/HelveticaRoundedLTStd-Bd_44_small.png" /></a>
+  <a href=" comma" title="Gotham Rounded - Medium"><img src="images/GothamRounded-Medium_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Helvetica Rounded LT Std - Bold Oblique"><img src="images/HelveticaRoundedLTStd-BdO_44_small.png" /></a>
+  <a href=" comma" title="Gotham Rounded - Medium Italic"><img src="images/GothamRounded-MediumItalic_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Hiruko - Regular"><img src="images/Hiruko_44_small.png" /></a>
+  <a href=" comma" title="Helvetica Rounded LT Std - Bold"><img src="images/HelveticaRoundedLTStd-Bd_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Hiruko - Black Alternate"><img src="images/Hiruko-BlackAlternate_44_small.png" /></a>
+  <a href=" comma" title="Helvetica Rounded LT Std - Bold Oblique"><img src="images/HelveticaRoundedLTStd-BdO_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Maagkramp - Regular"><img src="images/Maagkramp_44_small.png" /></a>
+  <a href=" comma" title="Hiruko - Regular"><img src="images/Hiruko_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="MgOpen Modata - Bold"><img src="images/MgOpenModata-Bold_44_small.png" /></a>
+  <a href=" comma" title="Hiruko - Black Alternate"><img src="images/Hiruko-BlackAlternate_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="MgOpen Modata - BoldOblique"><img src="images/MgOpenModata-BoldOblique_44_small.png" /></a>
+  <a href=" comma" title="Maagkramp - Regular"><img src="images/Maagkramp_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Normalise Din MN - Regular"><img src="images/NormaliseDinMN_44_small.png" /></a>
+  <a href=" comma" title="MgOpen Modata - Bold"><img src="images/MgOpenModata-Bold_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Predicate Rounded - Regular"><img src="images/PredicateRounded_44_small.png" /></a>
+  <a href=" comma" title="MgOpen Modata - BoldOblique"><img src="images/MgOpenModata-BoldOblique_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Predicate Rounded - Bold"><img src="images/PredicateRounded-Bold_44_small.png" /></a>
+  <a href=" comma" title="Normalise Din MN - Regular"><img src="images/NormaliseDinMN_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Predicate Rounded - Bold Italic"><img src="images/PredicateRounded-BoldItalic_44_small.png" /></a>
+  <a href=" comma" title="Predicate Rounded - Regular"><img src="images/PredicateRounded_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Predicate Rounded - Italic"><img src="images/PredicateRounded-Italic_44_small.png" /></a>
+  <a href=" comma" title="Predicate Rounded - Bold"><img src="images/PredicateRounded-Bold_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Simpliciter Sans - Bold"><img src="images/SimpliciterSans-Bold_44_small.png" /></a>
+  <a href=" comma" title="Predicate Rounded - Bold Italic"><img src="images/PredicateRounded-BoldItalic_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Book"><img src="images/StagSansRound-Book_44_small.png" /></a>
+  <a href=" comma" title="Predicate Rounded - Italic"><img src="images/PredicateRounded-Italic_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Book Italic"><img src="images/StagSansRound-BookItalic_44_small.png" /></a>
+  <a href=" comma" title="Simpliciter Sans - Bold"><img src="images/SimpliciterSans-Bold_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Medium"><img src="images/StagSansRound-Medium_44_small.png" /></a>
+  <a href=" comma" title="Stag Sans Round - Book"><img src="images/StagSansRound-Book_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Medium Italic"><img src="images/StagSansRound-MediumItalic_44_small.png" /></a>
+  <a href=" comma" title="Stag Sans Round - Book Italic"><img src="images/StagSansRound-BookItalic_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Semibold"><img src="images/StagSansRound-Semibold_44_small.png" /></a>
+  <a href=" comma" title="Stag Sans Round - Medium"><img src="images/StagSansRound-Medium_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Stag Sans Round - Semibold Italic"><img src="images/StagSansRound-SemiboldItalic_44_small.png" /></a>
+  <a href=" comma" title="Stag Sans Round - Medium Italic"><img src="images/StagSansRound-MediumItalic_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Book"><img src="images/TWCRound-Book_44_small.png" /></a>
+  <a href=" comma" title="Stag Sans Round - Semibold"><img src="images/StagSansRound-Semibold_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Book Italic"><img src="images/TWCRound-BookItalic_44_small.png" /></a>
+  <a href=" comma" title="Stag Sans Round - Semibold Italic"><img src="images/StagSansRound-SemiboldItalic_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Medium"><img src="images/TWCRound-Medium_44_small.png" /></a>
+  <a href=" comma" title="TWC Round - Book"><img src="images/TWCRound-Book_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Medium Italic"><img src="images/TWCRound-MediumItalic_44_small.png" /></a>
+  <a href=" comma" title="TWC Round - Book Italic"><img src="images/TWCRound-BookItalic_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Semibold"><img src="images/TWCRound-Semibold_44_small.png" /></a>
+  <a href=" comma" title="TWC Round - Medium"><img src="images/TWCRound-Medium_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="TWC Round - Semibold Italic"><img src="images/TWCRound-SemiboldItalic_44_small.png" /></a>
+  <a href=" comma" title="TWC Round - Medium Italic"><img src="images/TWCRound-MediumItalic_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="Ubuntu Titling - Bold"><img src="images/UbuntuTitling-Bold_44_small.png" /></a>
+  <a href=" comma" title="TWC Round - Semibold"><img src="images/TWCRound-Semibold_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VAG Rounded Std - Black"><img src="images/VAGRoundedStd-Black_44_small.png" /></a>
+  <a href=" comma" title="TWC Round - Semibold Italic"><img src="images/TWCRound-SemiboldItalic_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VAG Rounded Std - Bold"><img src="images/VAGRoundedStd-Bold_44_small.png" /></a>
+  <a href=" comma" title="Ubuntu Titling - Bold"><img src="images/UbuntuTitling-Bold_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VAG Rounded Std - Light"><img src="images/VAGRoundedStd-Light_44_small.png" /></a>
+  <a href=" comma" title="VAG Rounded Std - Black"><img src="images/VAGRoundedStd-Black_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VAG Rounded Std - Thin"><img src="images/VAGRoundedStd-Thin_44_small.png" /></a>
+  <a href=" comma" title="VAG Rounded Std - Bold"><img src="images/VAGRoundedStd-Bold_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VariableBlack - Regular"><img src="images/VariableBlack_44_small.png" /></a>
+  <a href=" comma" title="VAG Rounded Std - Light"><img src="images/VAGRoundedStd-Light_44_small.png" /></a>
 	</div>
 	<div class="glyph_image">
-  <a href="" title="VariableBlack - Italic"><img src="images/VariableBlack-Italic_44_small.png" /></a>
+  <a href=" comma" title="VAG Rounded Std - Thin"><img src="images/VAGRoundedStd-Thin_44_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" comma" title="VariableBlack - Regular"><img src="images/VariableBlack_44_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" comma" title="VariableBlack - Italic"><img src="images/VariableBlack-Italic_44_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" comma" title="Workaround - Round Bold"><img src="images/Workaround-RoundBold_44_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" comma" title="Workaround - Round Bold Italic"><img src="images/Workaround-RoundBoldItalic_44_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" comma" title="Workaround - Round Italic"><img src="images/Workaround-RoundItalic_44_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" comma" title="Workaround - Round Roman"><img src="images/Workaround-RoundRoman_44_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" comma" title="Workaround - Round SemiBold"><img src="images/Workaround-RoundSemiBold_44_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" comma" title="Workaround - Round SemiBold Italic"><img src="images/Workaround-RoundSemiBoldItalic_44_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" comma" title="Workaround - SemiRound Bold"><img src="images/Workaround-SemiRoundBold_44_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" comma" title="Workaround - SemiRound Bold Italic"><img src="images/Workaround-SemiRoundBoldItalic_44_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" comma" title="Workaround - SemiRound Italic"><img src="images/Workaround-SemiRoundItalic_44_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" comma" title="Workaround - SemiRound Roman"><img src="images/Workaround-SemiRoundRoman_44_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" comma" title="Workaround - SemiRound SemiBold"><img src="images/Workaround-SemiRoundSemiBold_44_small.png" /></a>
+	</div>
+	<div class="glyph_image">
+  <a href=" comma" title="Workaround - SemiRound SemiBold Italic"><img src="images/Workaround-SemiRoundSemiBoldItalic_44_small.png" /></a>
 	</div>
 </div>
 
