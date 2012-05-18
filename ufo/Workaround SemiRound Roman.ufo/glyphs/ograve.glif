@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ograve" format="1">
+  <advance width="785"/>
+  <unicode hex="00F2"/>
+  <outline>
+    <contour>
+      <point x="0" y="325" type="curve" smooth="yes"/>
+      <point x="0" y="143"/>
+      <point x="146" y="-5"/>
+      <point x="325" y="-5" type="curve" smooth="yes"/>
+      <point x="504" y="-5"/>
+      <point x="650" y="143"/>
+      <point x="650" y="325" type="curve" smooth="yes"/>
+      <point x="650" y="507"/>
+      <point x="504" y="655"/>
+      <point x="325" y="655" type="curve" smooth="yes"/>
+      <point x="146" y="655"/>
+      <point x="0" y="507"/>
+    </contour>
+    <contour>
+      <point x="175" y="325" type="curve" smooth="yes"/>
+      <point x="175" y="420"/>
+      <point x="242" y="497"/>
+      <point x="325" y="497" type="curve" smooth="yes"/>
+      <point x="408" y="497"/>
+      <point x="475" y="420"/>
+      <point x="475" y="325" type="curve" smooth="yes"/>
+      <point x="475" y="230"/>
+      <point x="408" y="153"/>
+      <point x="325" y="153" type="curve" smooth="yes"/>
+      <point x="242" y="153"/>
+      <point x="175" y="230"/>
+    </contour>
+    <contour>
+      <point x="246" y="971" type="line" smooth="yes"/>
+      <point x="240" y="977"/>
+      <point x="225" y="970"/>
+      <point x="205" y="951" type="curve"/>
+      <point x="184" y="933"/>
+      <point x="164" y="908"/>
+      <point x="149" y="884" type="curve" smooth="yes"/>
+      <point x="135" y="861"/>
+      <point x="131" y="845"/>
+      <point x="137" y="840" type="curve"/>
+      <point x="309" y="734" type="line" smooth="yes"/>
+      <point x="315" y="730"/>
+      <point x="336" y="745"/>
+      <point x="356" y="769" type="curve" smooth="yes"/>
+      <point x="376" y="794"/>
+      <point x="388" y="817"/>
+      <point x="382" y="823" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>

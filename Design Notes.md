@@ -1,7 +1,13 @@
 workaround-font
 ===============
 
-Optical Correction
+History
+-------
+
+* May 5th, 2012 - started work.
+
+Optical Correction, etc.
+------------------------
 
 * Horizontal strokes are slightly thinner than vertical strokes.  
 * Diagonal strokes widths fall somewhere in between, varying with the angle of the stroke.
@@ -10,7 +16,9 @@ Optical Correction
 * No tapering on strokes; all straight strokes are mono-width, ie. their sides are parallel.
   * No longer true.  I've tapered the joints on 3, 8, etc. and the counters on O, 0, C, D, etc.
 
-TODOs:
+TODOs
+-----
+
 * We need to audit all glyph widths.  
 * We need to audit all kerning.  
 * Is x-height right?
@@ -32,24 +40,35 @@ TODOs:
 * The 2 is tricky.
 * The 7 is outright bad. 
 * The 8 is tricky. 
-
+* Fix the crossbars in the cap and lowercase z's.
+* The descenders are completely fubar'd.
+	* FIXED
+* The bdpq is bad.
+* The e is bad and adapts poorly to semiround/bold.
+	* BETTER
+* The g tail needs to be stretched.
+	* BETTER
+* the g italics are fubar-ed.
+	* FIXED
+* The x-height is probably too low
+	* BETTER
+* the s has severe problems, especially in bold.  raising the x-height will probably help.
+* the t foot is way too curved.
+	* NEEDS WORK
+* the x tips should probably not be tipped.
+	* BETTER
+* the z diagonal should be thinned.
+ 
 * We need to compare various cross-bars and make sure they align.
   * A, S, F, G, H, K, E, R, Y, P, B, X, 
   * Numerals too!, ie. 3, 4, 5, 6, 8, 9.
   * etc.
-  
-http://www.myfonts.com/fonts/bomparte/glow-gothic/overlay/glyphs.html
-http://www.myfonts.com/fonts/g-type/chevin-pro/bold/glyphs.html
-http://www.myfonts.com/fonts/typodermic/scheme/regular/glyphs.html
-http://www.myfonts.com/fonts/typodermic/report/semibold/glyphs.html
-http://www.myfonts.com/fonts/exljbris/museo-sans-rounded/
 
-http://www.fontshop.com/fonts/downloads/fontfont/ff_speak_web/
-http://www.fontshop.com/fonts/downloads/fontfont/ff_din_round_web/
+Links
+-----
 
 http://www.myfonts.com/search/tag%3Arounded/fonts/?sort=sales
 http://www.myfonts.com/search/tag%3Around/fonts/?sort=sales
 
-http://www.behance.net/gallery/FF-DIN-Round/647150
 Interesting idea from: Albert-Jan Pool
 http://en.wikipedia.org/wiki/Clothoid
